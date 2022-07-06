@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Cocoon</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<script>
+    function add_attendance() {
+        
+        let user_name = $('#user_name').val();
+        let phone_number=$('#user_phonenumber').val();
+        let data = {'username': user_name, 'phone': phone_number};
+        $.ajax({
+            type: "POST",
+            url: "/add/attendances",
+            contentType: "application/json",
+            data: JSON.stringify(data),
+            success: function (response) {
+                alert('메시지가 성공적으로 작성되었습니다.');
+                window.location.reload();
+            }
+        });
+    }
+</script>
+<body>
+
+<section>
+    <h1>회원가입 페이지</h1>
+</section>
+
+<section>
+    <form name="login" action="index.html" method="post">
+
+        이름<br>  <input type="text" name="user_name" value="" id="user_name"> <br>
+
+        휴대폰번호<br><input type="text" name="user_phonenumber" placeholder="-를 빼고 입력허세요"><br><br>
+
+        <br><br><br>
+        <input type="submit" name="" value="제출" onclick="add_attendance()">
+
+    </form>
+</section>
+
+
+</body>
+</html>
