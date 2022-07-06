@@ -4,6 +4,7 @@ function add_attendance() {
     let user_name = $('#user_name').val();
     let phone_number=$('#user_phonenumber').val();
     let data = {'username': user_name};
+
     $.ajax({
         type: "POST",
         url: `${domainURL}/add/attendances`,
