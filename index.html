@@ -2,26 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Cocoon</title>
+    <title>newfine_qr</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <script>
-    function add_attendance() {
-        
-        let user_name = $('#user_name').val();
-        let phone_number=$('#user_phonenumber').val();
-        let data = {'username': user_name, 'phone': phone_number};
-        $.ajax({
-            type: "POST",
-            url: "/add/attendances",
-            contentType: "application/json",
-            data: JSON.stringify(data),
-            success: function (response) {
-                alert('메시지가 성공적으로 작성되었습니다.');
-                window.location.reload();
-            }
-        });
-    }
+
 </script>
 <body>
 
