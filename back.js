@@ -1,4 +1,4 @@
-let domainURL= 'http://newfinebackenddocker.ap-northeast-2.elasticbeanstalk.com';
+let domainURL= 'https://eb.newfine.tk';
 function add_attendance() {
 
     let user_name = $('#user_name').val();
