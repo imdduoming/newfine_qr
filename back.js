@@ -1,4 +1,4 @@
-let domainURL= 'https://eb.newfine.tk';
+let domainURL= 'https://eb.newfine.tk/';
 function add_attendance() {
 
     let user_name = $('#user_name').val();
@@ -7,7 +7,7 @@ function add_attendance() {
 
     $.ajax({
         type: "POST",
-        url: `${domainURL}/add/attendances`,
+        url: domainURL+'add/attendances',
         contentType: "application/json",
         data: JSON.stringify(data),
         success: function (response) {
