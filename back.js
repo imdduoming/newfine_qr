@@ -3,7 +3,7 @@ function add_attendance() {
 
     let user_name = $('#user_name').val();
     let data = {'username': user_name};
-
+    console.log(data)
 
     $.ajax({
         type: "POST",
