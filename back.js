@@ -8,7 +8,6 @@ function add_attendance() {
     let data = {'studentName': user_name};
     console.log(data)
 
-
     $.ajax({
         type: "POST",
         url: domainURL+'add/attendance',
