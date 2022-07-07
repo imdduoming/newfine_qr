@@ -16,8 +16,8 @@
 </section>
 
 <section>
-
-        이름<br>  <input type="text" name="user_name" value="" id="user_name"> <br>
+    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+    이름<br>  <input type="text" name="user_name" value="" id="user_name"> <br>
 
 <!--        휴대폰번호<br><input type="text" name="user_phonenumber" placeholder="-를 빼고 입력허세요"><br><br>-->
 
