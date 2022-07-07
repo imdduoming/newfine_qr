@@ -10,7 +10,7 @@ function add_attendance() {
 
     $.ajax({
         type: "POST",
-        url: domainURL+'/add/attendance',
+        url: `${domainURL}/add/attendance`,
         contentType: "application/json",
         dataType : "json",
         data: JSON.stringify(data),
