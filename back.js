@@ -35,8 +35,8 @@ function get_myattendance(user_phone) {
         success: function (response) {
             console.log(response);
             for (let i = 0; i < response.length; i++) {
-                let time=response[0]['createdDate']
-                let phone=response[0]['studentPhone']
+                let time=response[i]['createdDate']
+                let phone=response[i]['studentPhone']
 
                 let temp_html = `<tr>
                                         
