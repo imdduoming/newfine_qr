@@ -1,7 +1,7 @@
 let domainURL= 'https://eb.newfine.tk';
 function add_attendance() {
 
-    let user_phone = $('#user_name').val();
+    let user_phone = $('#user_phonenumber').val();
     let data = {"studentPhoneNumber": user_phone};
 
     $.ajax({
@@ -19,7 +19,8 @@ function add_attendance() {
 }
 function show_myattendance() {
 
-    let user_phone = $('#user_name').val();
+    let user_phone = $('#user_phonenumber').val();
+    console.log(user_phone)
     location.href = `./attendance.html?user=`+user_phone;
 
 
