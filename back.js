@@ -35,12 +35,12 @@ function get_myattendance(user_phone) {
         success: function (response) {
             console.log(response);
             for (let i = 0; i < response.length; i++) {
-                let time=response['createdDate']
-                let phone=response['studentPhone']
+                let time=response[0]['createdDate']
+                let phone=response[0]['studentPhone']
 
                 let temp_html = `<tr>
                                         
-                                                
+                                           
                                                 <td>${phone}</td>
                                                 <td>과학</td>
                                                 <td>${time}</td>
