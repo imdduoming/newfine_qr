@@ -34,6 +34,22 @@ function get_myattendance(user_phone) {
         data: {},
         success: function (response) {
             console.log(response);
+            for (let i = 0; i < response.length; i++) {
+                let time=response['createdDate']
+                let phone=response['studentPhone']
+
+                let temp_html = `<tr>
+                                        
+                                                
+                                                <td>${phone}</td>
+                                                <td>과학</td>
+                                                <td>${time}</td>
+                                              
+                                            </tr>`;
+                $('#attendance-box').append(temp_html);
+
+                }
+
         }
 
     });
