@@ -8,7 +8,9 @@
 <script type="text/javascript" src="qrcode.js"></script>
 </head>
 <body>
-<input id="text" type="text" value="https://jh91.tistory.com/" style="width:100%" /><br />
+<br>수업을 입력하세요
+<input id="text" type="text" value="" style="width:100%" /><br />
+<button type="button" id="qrmake" onclick="makeCode()">qrcode 생성</button>
 <div id="qrcode" style="width:100px; height:100px; margin:auto; margin-top:15px;"></div>
 
 <script type="text/javascript">
@@ -29,16 +31,16 @@ function makeCode () {
 	qrcode.makeCode(elText.value);
 }
 
-makeCode();
-
-$("#text").
-	on("blur", function () {
-		makeCode();
-	}).
-	on("keydown", function (e) {
-		if (e.keyCode == 13) {
-			makeCode();
-		}
-	});
+// makeCode();
+//
+// $("#text").
+// 	on("blur", function () {
+// 		makeCode();
+// 	}).
+// 	on("keydown", function (e) {
+// 		if (e.keyCode == 13) {
+// 			makeCode();
+// 		}
+// 	});
 </script>
 </body>
