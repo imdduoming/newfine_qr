@@ -4,7 +4,10 @@
     <meta charset="utf-8"/>
     <title>newfine_qr</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
     <script src="./back.js"> </script>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="./qrcode.js"></script>
 </head>
 <script>
 
@@ -24,6 +27,10 @@
         <br><br><br>
         <button type="button" onclick="add_attendance()">출석</button>
         <button type="button" onclick="show_myattendance()">내 출석 현황</button>
+
+    수업을 입력하세요 <br><input id="site" type="text" value="" style="width:100%" /><br />
+
+    <div id="qrcode" style="width:100px; height:100px; margin:auto; margin-top:15px;"></div>
 
 
 
