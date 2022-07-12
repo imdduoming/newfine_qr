@@ -10,7 +10,7 @@ function add_attendance() {
         contentType: "application/json",
         data: JSON.stringify(data),
         success: function (response) {
-            console.log(data)
+            console.log(response)
             alert('출석 되었습니다!');
             window.location.reload();
         }
