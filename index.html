@@ -47,8 +47,7 @@ function make_attendance() {
         data: JSON.stringify(data),
         success: function (response) {
             console.log(response)
-            alert('출석이 생성됐습니다!');
-            window.location.reload();
+            alert('출석이 생성됐습니다!')
             $('input[name=url]').attr('value',response['url']);
         }
 
