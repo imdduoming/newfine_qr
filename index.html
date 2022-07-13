@@ -46,7 +46,7 @@ function makeCode () {
 }
 function make_attendance() {
 
-    var selected_course=documemnt.getElementById('course_list')
+    var selected_course=document.getElementById('course_list')
     let course= selected_course.options[selected_course.selectedIndex].value;
     console.log(course);
     let data = {"course_id": course};
