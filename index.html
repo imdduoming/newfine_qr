@@ -15,12 +15,8 @@
 <button type="button" id="add_attendance" onclick="make_attendance()">수업 url 생성</button>
 <div>
 <form>
-    <select name="course" onchange="select_course(this)">
-        <option value="none">=== 선택 ===</option>
-        <option value="korean">한국어</option>
-        <option value="english">영어</option>
-        <option value="chinese">중국어</option>
-        <option value="spanish">스페인어</option>
+    <select name="course" id="course_list" onchange="select_course(this)">
+
     </select>
 </form>
 </div>
@@ -104,6 +100,14 @@ function get_course() {
         url: `${domainURL}/get/all/courses`,
         success: function (response) {
             console.log(response)
+            for (let i =0 ;i < response.length ; i++){// obj 길이 만큼 반복
+
+                var optionValue = response[i]['cid']; // 서버에서 전달 받은 value
+                var optionFront = res.result[i]['cname']; // 사용자에게 보여지는 부분
+                var option = '<option value='+optionVlue+'>'+optionFront+'</option>'; // 결합
+
+                $('#course_list').append(option); // Select 태그에 옵션 태그 추가
+            }
         }
 
     });
