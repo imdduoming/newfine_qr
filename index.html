@@ -16,7 +16,7 @@
 <div>
 <form>
     <select name="course" id="course_list" onchange="select_course(this)">
-
+        <option value='none'>===수업선택===</option>
     </select>
 </form>
 </div>
@@ -104,7 +104,7 @@ function get_course() {
 
                 var optionValue = response[i]['cid']; // 서버에서 전달 받은 value
                 var optionFront = response[i]['cname']; // 사용자에게 보여지는 부분
-                var option = '<option value='+optionVlue+'>'+optionFront+'</option>'; // 결합
+                var option = '<option value='+optionValue+'>'+optionFront+'</option>'; // 결합
 
                 $('#course_list').append(option); // Select 태그에 옵션 태그 추가
             }
