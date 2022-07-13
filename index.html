@@ -103,7 +103,7 @@ function get_course() {
             for (let i =0 ;i < response.length ; i++){// obj 길이 만큼 반복
 
                 var optionValue = response[i]['cid']; // 서버에서 전달 받은 value
-                var optionFront = res.result[i]['cname']; // 사용자에게 보여지는 부분
+                var optionFront = response[i]['cname']; // 사용자에게 보여지는 부분
                 var option = '<option value='+optionVlue+'>'+optionFront+'</option>'; // 결합
 
                 $('#course_list').append(option); // Select 태그에 옵션 태그 추가
